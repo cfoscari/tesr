@@ -10,10 +10,10 @@
 //----------------------------------------------------------------------
 // INCLUDES:
 //----------------------------------------------------------------------
-//Questo è un test
+//Questo ï¿½ un test
 // 123
 #include "stdafx.h"
-
+// vediamo se funziona
 #include <infline.h>
 #include <utils.h>
 
@@ -931,7 +931,7 @@ CArcsBorderWorkStrategy::PunchCircle(CAMBORDER &borCircular, int iToolType, bool
 				dMinRoughness = fabs(dMinRoughness);
 
 				// In base alle impostazioni dell'utente la scelta fra utensili viene 
-				// fatta tra quelli piú grandi o quelli che producono l'asperitá minore
+				// fatta tra quelli piï¿½ grandi o quelli che producono l'asperitï¿½ minore
 				bool bPrefer = false;
 				if(!GetParameters().bPreferToolByRough)
 					bPrefer = true;
@@ -973,7 +973,7 @@ CArcsBorderWorkStrategy::PunchCircle(CAMBORDER &borCircular, int iToolType, bool
 					iNumPunches = iNum;
 
 					// mi fermo subito se non devo scegliere l'utensile
-					// che produce l'asperitá minore
+					// che produce l'asperitï¿½ minore
 					if(!GetParameters().bPreferToolByRough)
 						break;
 				}
@@ -1002,7 +1002,7 @@ CArcsBorderWorkStrategy::PunchCircle(CAMBORDER &borCircular, int iToolType, bool
 				dMinRoughness = fabs(dMinRoughness);
 
 				// In base alle impostazioni dell'utente la scelta fra utensili viene 
-				// fatta tra quelli piú grandi o quelli che producono l'asperitá minore
+				// fatta tra quelli piï¿½ grandi o quelli che producono l'asperitï¿½ minore
 				bool bPrefer = false;
 				if(!GetParameters().bPreferToolByRough)
 					bPrefer = true;
@@ -1044,7 +1044,7 @@ CArcsBorderWorkStrategy::PunchCircle(CAMBORDER &borCircular, int iToolType, bool
 					iNumPunches = iNum;
 
 					// mi fermo subito se non devo scegliere l'utensile
-					// che produce l'asperitá minore
+					// che produce l'asperitï¿½ minore
 					if(!GetParameters().bPreferToolByRough)
 						break;
 				}
@@ -1073,7 +1073,7 @@ CArcsBorderWorkStrategy::PunchCircle(CAMBORDER &borCircular, int iToolType, bool
 					dRoughTricuspTool = dMinRoughness;
 
 					// In base alle impostazioni dell'utente la scelta fra utensili viene 
-					// fatta tra quelli piú grandi o quelli che producono l'asperitá minore
+					// fatta tra quelli piï¿½ grandi o quelli che producono l'asperitï¿½ minore
 					bool bPrefer = false;
 					if(!GetParameters().bPreferToolByRough)
 						bPrefer = true;
@@ -1129,7 +1129,7 @@ CArcsBorderWorkStrategy::PunchCircle(CAMBORDER &borCircular, int iToolType, bool
 					pToolCirc = (CgToolCirc *)aCirTools[iTool];
 					dRadCirTool = pToolCirc->GetRadius();
 
-					// Asperitá minima ottenibile (da SDEX)
+					// Asperitï¿½ minima ottenibile (da SDEX)
 					int iRet = CUtilsTools::GetRealRoughForTool(&GET_TOOL_DB, pToolCirc, pCircle, dRoughness, dMinRoughness, iUnusedIndex);
 					// SDEX puo' ritornare asperita' negativa se il raggio usato per la roditura
 					// e' maggiore del raggio dell'arco da rodere
@@ -1140,11 +1140,11 @@ CArcsBorderWorkStrategy::PunchCircle(CAMBORDER &borCircular, int iToolType, bool
 						dRoughCirTool = dMinRoughness;
 
 						// In base alle impostazioni dell'utente la scelta fra utensili viene 
-						// fatta tra quelli piú grandi o quelli che producono l'asperitá minore
+						// fatta tra quelli piï¿½ grandi o quelli che producono l'asperitï¿½ minore
 						bool bPrefer = false;
 
 						// scelgo l'utensile in base alla sua grandezza oppure
-						// alla asperitá prodotta
+						// alla asperitï¿½ prodotta
 						if(!GetParameters().bPreferToolByRough)
 							bPrefer = true;
 						else
@@ -1177,7 +1177,7 @@ CArcsBorderWorkStrategy::PunchCircle(CAMBORDER &borCircular, int iToolType, bool
 							iIndexCirc = iTool;
 						}
 						// mi fermo subito se non devo scegliere l'utensile
-						// che produce l'aspertiá minore
+						// che produce l'aspertiï¿½ minore
 						if(!GetParameters().bPreferToolByRough)
 							break;
 					}
@@ -1245,7 +1245,7 @@ CArcsBorderWorkStrategy::PunchCircle(CAMBORDER &borCircular, int iToolType, bool
 					pToolRectSgr = (CgToolRect *)aRectTools[iLoopInd];
 					
 					// M. Beninca 29/5/2002
-					// Chiedo ad SDEX se é possibile eseguire la RIC con questo
+					// Chiedo ad SDEX se ï¿½ possibile eseguire la RIC con questo
 					// utensile sgrossatore
 					CmRic Ric(&GETPUNCHPROGRAM);
 					Ric.SetRefPoint(c);
@@ -1386,9 +1386,9 @@ CArcsBorderWorkStrategy::PunchCircle(CAMBORDER &borCircular, int iToolType, bool
 				case CIRCULAR:
 					// attenzione la routine di risoluzione della parte interna
 					// di una RIC in SDEX scazza (fa un sacco di colpi inutili) se
-					// l'asperitá programmata é piú grande del raggio dell'utensile
+					// l'asperitï¿½ programmata ï¿½ piï¿½ grande del raggio dell'utensile
 					// finitore. Quindi in questo caso la riduco tanto in ogni caso
-					// l'asperitá reale sará coerente con quella precedentemente calcolata
+					// l'asperitï¿½ reale sarï¿½ coerente con quella precedentemente calcolata
 					if(dRoughness > pToolCirc->GetRadius())
 						dRoughness = pToolCirc->GetRadius() - resabs;
 					pRic->SetUsedTool(pToolCirc);
@@ -1931,12 +1931,12 @@ CArcsBorderWorkStrategy::PunchClockwiseArc(CAMBORDER &border, CgBorder &borderOr
 					dHeightTool = pToolRect->GetWidth();
 					angOffset = CbAngle(M_PI_2);
 				}
-				// Se solo la la base soddisfa le condizioni lascio tutto come é
+				// Se solo la la base soddisfa le condizioni lascio tutto come ï¿½
 				else if (pToolRect->GetWidth() >= 3.0 * dRoughPol)
 				{
 				}
 				// se non soddisfo le condizioni non posso usare l'utensile
-				// Questo dovrebbe essere giá filtrato dalla ricerca ma per chiarezza!?
+				// Questo dovrebbe essere giï¿½ filtrato dalla ricerca ma per chiarezza!?
 				else
 					continue;
 				
@@ -1951,7 +1951,7 @@ CArcsBorderWorkStrategy::PunchClockwiseArc(CAMBORDER &border, CgBorder &borderOr
 				// ricalcolo il passo angolare tenendo conto dell'asperita` data come parametro
 				CbAngle angPitch (2.0 * atan2((dWidthTool - GetParameters().dIntOverlap) / 2.0, dRad + dHeightTool));
 				
-				// l'arco sooteso é troppo piccolo: l'utensile non va bene!!!
+				// l'arco sooteso ï¿½ troppo piccolo: l'utensile non va bene!!!
 				if(angPitch == CbAngle(0.0) || angPitch == M_PI_2)
 					continue;
 
@@ -2982,7 +2982,7 @@ CArcsBorderWorkStrategy::PunchAnticlockwiseArc(CAMBORDER &border, CgBorder &bord
 		// meno 2 volte lo spessore)
 		double	dMinRadToolSear = mymax(2.0 * GetParameters().dThickness, GetParameters().dMinToolNIB);
 		// M. Beninca 20/3/2002
-		// il raggio minimo non puó essere piú grande della minina sovrapposizione tra due
+		// il raggio minimo non puï¿½ essere piï¿½ grande della minina sovrapposizione tra due
 		// punzonature / 2. In questo caso non avrei roditura!
 		dMinRadToolSear = mymax(dMinRadToolSear, GetConstants().dMinDistCirRough / 2.0);
 		double	dMaxRadToolSear = mymin(3.0 / 4.0 * dRad, dRad - GetParameters().dThickness);
@@ -3004,9 +3004,9 @@ CArcsBorderWorkStrategy::PunchAnticlockwiseArc(CAMBORDER &border, CgBorder &bord
 		bool bPreferToolByRough = GetParameters().bPreferToolByRough;
 
 		// M. Beninca 29/5/2002
-		// Eseguo due volte il loop se devo scegliere l'utensile che produce l'asperitá minore
-		// La prima volta cerco su tutti gli utensili quello che produce l'asperitá
-		// piú piccola. La seconda se non ho successo provo con l'utensile piú grande
+		// Eseguo due volte il loop se devo scegliere l'utensile che produce l'asperitï¿½ minore
+		// La prima volta cerco su tutti gli utensili quello che produce l'asperitï¿½
+		// piï¿½ piccola. La seconda se non ho successo provo con l'utensile piï¿½ grande
 
 		int iIndexRad4Found = 0;
 		int iIndexRad8Found = 0;
@@ -3059,7 +3059,7 @@ CArcsBorderWorkStrategy::PunchAnticlockwiseArc(CAMBORDER &border, CgBorder &bord
 							dRoughRadMult4Tool = dMinRoughness;
 
 							// In base alle impostazioni dell'utente la scelta fra utensili viene 
-							// fatta tra quelli piú grandi o quelli che producono l'asperitá minore
+							// fatta tra quelli piï¿½ grandi o quelli che producono l'asperitï¿½ minore
 							bool bPrefer = false;
 							if(!bPreferToolByRough)
 								bPrefer = true;
@@ -3122,7 +3122,7 @@ CArcsBorderWorkStrategy::PunchAnticlockwiseArc(CAMBORDER &border, CgBorder &bord
 							dRoughRadMult8Tool = dMinRoughness;
 
 							// In base alle impostazioni dell'utente la scelta fra utensili viene 
-							// fatta tra quelli piú grandi o quelli che producono l'asperitá minore
+							// fatta tra quelli piï¿½ grandi o quelli che producono l'asperitï¿½ minore
 							bool bPrefer = false;
 							if(!bPreferToolByRough)
 								bPrefer = true;
@@ -3187,7 +3187,7 @@ CArcsBorderWorkStrategy::PunchAnticlockwiseArc(CAMBORDER &border, CgBorder &bord
 							dRoughTricuspTool = dMinRoughness;
 
 							// In base alle impostazioni dell'utente la scelta fra utensili viene 
-							// fatta tra quelli piú grandi o quelli che producono l'asperitá minore
+							// fatta tra quelli piï¿½ grandi o quelli che producono l'asperitï¿½ minore
 							bool bPrefer = false;
 							if(!bPreferToolByRough)
 								bPrefer = true;
@@ -3276,7 +3276,7 @@ CArcsBorderWorkStrategy::PunchAnticlockwiseArc(CAMBORDER &border, CgBorder &bord
 							dRoughCirTool = dMinRoughness;
 							
 							// In base alle impostazioni dell'utente la scelta fra utensili viene 
-							// fatta tra quelli piú grandi o quelli che producono l'asperitá minore
+							// fatta tra quelli piï¿½ grandi o quelli che producono l'asperitï¿½ minore
 							bool bPrefer = false;
 							if(!bPreferToolByRough)
 								bPrefer = true;
@@ -3331,13 +3331,13 @@ CArcsBorderWorkStrategy::PunchAnticlockwiseArc(CAMBORDER &border, CgBorder &bord
 				bStop = true;
 
 			// se sono al primo giro per la ricerca dell'utensile con
-			// asperitá minore mi ricordo che al prossimo giro useró
+			// asperitï¿½ minore mi ricordo che al prossimo giro userï¿½
 			// l'algoritmo in base all'ingombro
 			if(bPreferToolByRough)
 				bPreferToolByRough = false;
 
 			// popolo i dati per le routine seguenti che necessitano di sapere che
-			// utensile é stato scelto
+			// utensile ï¿½ stato scelto
 			if(bRadMult4Found)
 				pToolRadMult4 = (CgToolRadMult4*)aRadMult4Tools[iIndexRad4Found];
 			if(bRadMult8Found)
@@ -3508,16 +3508,16 @@ CArcsBorderWorkStrategy::PunchAnticlockwiseArc(CAMBORDER &border, CgBorder &bord
 		{
 			
 			// calcolo il raggio acora da rodere nel seguente modo:
-			// - se l'angolo che resta da fare rispetto a 2PI é minore del minimo angolo
-			//		necessario perché le punzonature estreme di una RIC fatta con l'utensile
+			// - se l'angolo che resta da fare rispetto a 2PI ï¿½ minore del minimo angolo
+			//		necessario perchï¿½ le punzonature estreme di una RIC fatta con l'utensile
 			//		usato precedentemente si tocchino; allora resta da fare il raggio meno il
-			//		raggio dell'utensile. Perché la RIC si chiude agli estremi e la parte di
-			//		arco che resta perché si chiuda in un cerchio é giá coperta. Deve peró
-			//		anche essere verificato che l'asperitá che creo non chiudendo completamente
-			//		l'angolo 2PI non sia superiore all'asperitá finale impostata da parametri
+			//		raggio dell'utensile. Perchï¿½ la RIC si chiude agli estremi e la parte di
+			//		arco che resta perchï¿½ si chiuda in un cerchio ï¿½ giï¿½ coperta. Deve perï¿½
+			//		anche essere verificato che l'asperitï¿½ che creo non chiudendo completamente
+			//		l'angolo 2PI non sia superiore all'asperitï¿½ finale impostata da parametri
 			// - altrimenti resta da fare il massimo tra il raggio ridotto dalla RIC e la
 			//		differenza tra dMinDist e il raggio dell'arco
-			// Nel caso dell'utensile multiraggiato per il calcolo dell'asperitá devo usare
+			// Nel caso dell'utensile multiraggiato per il calcolo dell'asperitï¿½ devo usare
 			// il raggio effettivamante usato dell'utensile
 			CbAngle aNIB(2.0 * M_PI - (vecEnd.Angle() - vecStart.Angle()));
 			double dRoughRadius = dRadTool;
@@ -5049,10 +5049,10 @@ CArcsBorderWorkStrategy::NibbleIsPossible(CgArc &arc, CgItem *pItemPrev, CgItem 
 			{
 				CgArc *pA = (CgArc *) pItemPrev;
 				// M. Beninca 9/12/2002
-				// se l'arco seguente é troppo piccolo come raggio potrebbe essere che con
+				// se l'arco seguente ï¿½ troppo piccolo come raggio potrebbe essere che con
 				// l'utensile raggiatore ci sto lo stesso... uso quindi la corda dell'arco come
 				// riferimrnto per trovare la posizione dell'utensile ma solo se l'angolo dell'arco
-				// é piú piccolo di 90 gradi
+				// ï¿½ piï¿½ piccolo di 90 gradi
 				if(	pTool->GetFamily() == CgTool::FAM_RADMULT4 
 				||	pTool->GetFamily() == CgTool::FAM_RADMULT8 
 				||	pTool->GetFamily() == CgTool::FAM_TRICUSP 
@@ -5104,10 +5104,10 @@ CArcsBorderWorkStrategy::NibbleIsPossible(CgArc &arc, CgItem *pItemPrev, CgItem 
 			{
 				CgArc *pA = (CgArc *) pItemPrev;
 				// M. Beninca 9/12/2002
-				// se l'arco precedente é troppo piccolo come raggio potrebbe essere che con
+				// se l'arco precedente ï¿½ troppo piccolo come raggio potrebbe essere che con
 				// l'utensile raggiatore ci sto lo stesso... uso quindi la corda dell'arco come
 				// riferimrnto per trovare la posizione dell'utensile ma solo se l'angolo dell'arco
-				// é piú piccolo di 90 gradi
+				// ï¿½ piï¿½ piccolo di 90 gradi
 				if(	pTool->GetFamily() == CgTool::FAM_RADMULT4
 				||	pTool->GetFamily() == CgTool::FAM_RADMULT8
 				||	pTool->GetFamily() == CgTool::FAM_TRICUSP 
@@ -5198,7 +5198,7 @@ CArcsBorderWorkStrategy::NibbleIsPossible(CgArc &arc, CgItem *pItemPrev, CgItem 
 				// Tutti i controlli precedenti sono stati fatti assumendo come utensile
 				// il cerchio che inscrive l'utensile. Con il raggiatore multiplo devo
 				// stare attento che posisiziondo l'utensile vero posso andare ad inteferire
-				// con eventuali item precedenti e sucessivi. Anzi questo é sicuro nel caso che
+				// con eventuali item precedenti e sucessivi. Anzi questo ï¿½ sicuro nel caso che
 				// questi item formino angoli minori di PI con i vettori tangenti agli estremi
 				// dell'arco. Devo quindi correggere la posizione dell'utensile del valore
 				// dell'angolo di cui si sborda spostando l'utensile nella sua vera posizione
@@ -5307,7 +5307,7 @@ CArcsBorderWorkStrategy::NibbleIsPossible(CgArc &arc, CgItem *pItemPrev, CgItem 
 				}
 
 				// se ho ridotto troppo l'intervallo di roditura allora
-				// l'utensile non si puó usare
+				// l'utensile non si puï¿½ usare
 				if(AngleAdded > (v2.Angle() - v1.Angle()))
 					return false;
 
@@ -5334,7 +5334,7 @@ CArcsBorderWorkStrategy::NibbleIsPossible(CgArc &arc, CgItem *pItemPrev, CgItem 
 				// Tutti i controlli precedenti sono stati fatti assumendo come utensile
 				// il cerchio che inscrive l'utensile. Con il raggiatore multiplo devo
 				// stare attento che posisiziondo l'utensile vero posso andare ad inteferire
-				// con eventuali item precedenti e sucessivi. Anzi questo é sicuro nel caso che
+				// con eventuali item precedenti e sucessivi. Anzi questo ï¿½ sicuro nel caso che
 				// questi item formino angoli minori di PI con i vettori tangenti agli estremi
 				// dell'arco. Devo quindi correggere la posizione dell'utensile del valore
 				// dell'angolo di cui si sborda spostando l'utensile nella sua vera posizione
@@ -5442,7 +5442,7 @@ CArcsBorderWorkStrategy::NibbleIsPossible(CgArc &arc, CgItem *pItemPrev, CgItem 
 				}
 
 				// se ho ridotto troppo l'intervallo di roditura allora
-				// l'utensile non si puó usare
+				// l'utensile non si puï¿½ usare
 				if(AngleAdded > (v2.Angle() - v1.Angle()))
 					return false;
 
@@ -5468,10 +5468,10 @@ CArcsBorderWorkStrategy::NibbleIsPossible(CgArc &arc, CgItem *pItemPrev, CgItem 
 	}
 
 	if(bUseSdex){
-		// chiedo ad SDEX di calcolaere l'asperitá reale prodotta
+		// chiedo ad SDEX di calcolaere l'asperitï¿½ reale prodotta
 		int iRet = CUtilsTools::GetRealRoughForTool(&GET_TOOL_DB, pTool, &arc, dRoughness, dMinRoughness, iRadIndex);
 		
-		// errore impossible calcolare aperitá o asperitá impossibile da programmare
+		// errore impossible calcolare aperitï¿½ o asperitï¿½ impossibile da programmare
 		if(iRet == 1 || iRet == 2)
 			return false;
 
@@ -5483,7 +5483,7 @@ CArcsBorderWorkStrategy::NibbleIsPossible(CgArc &arc, CgItem *pItemPrev, CgItem 
 	// Ora posso fare il controllo sulle aperita`
 	if (IsGreaterEqual(dRoughness, dMinRoughness) && IsLessEqual(dRoughness1, dRoughnessEnds) && IsLessEqual(dRoughness2, dRoughnessEnds))
 	{
-		// imposto l'asperitá minima
+		// imposto l'asperitï¿½ minima
 		dMinRough = dMinRoughness;
 		apEnds.Add(c1);
 		apEnds.Add(c2);
@@ -5601,7 +5601,7 @@ CArcsBorderWorkStrategy::DoInternalNib (CbPoint &c, double dRadMax, double &dRad
 	// sulla dimensione minima dell'utensile sono: minimo tra:
 	// - raggio maggiore del parametro GetParameters().dMinToolNIB
 	// - diametro maggiore dello spessore del foglio
-	// (la condizione é la stessa della ArchPunch)
+	// (la condizione ï¿½ la stessa della ArchPunch)
 	double dMinDistCirRough = GetConstants().dMinDistCirRough;
 	double dMinRadCond = mymax(GetParameters().dMinToolNIB, 2.0 * GetParameters().dThickness);
 	iNumOfTools = GET_TOOL_DB.FindCirc(aToolCirc, iToolType, CbCond(dRadMin, dRadMin - dMinRadCond, 0.0), true);
@@ -6200,15 +6200,15 @@ CArcsBorderWorkStrategy::ObroundMng(CgBorder *pborder, int iToolType, bool bUseN
 
 					/////////////////////////////////////////////////////////////////////////////////
 					// M. Beninca COMMENTO DEL COMMENTO 
-					// La condizione attualmente attiva é quella formalmente corretta ma in alcuni casi
-					// é troppo stringente in quanto non vengono riconosciute come asole features
-					// asole che in relatá lo sono all'interno di una certa tolleranza. La condizione
-					// commentata invece é piú permissiva ma la contropartita é che vengono riconosciute 
+					// La condizione attualmente attiva ï¿½ quella formalmente corretta ma in alcuni casi
+					// ï¿½ troppo stringente in quanto non vengono riconosciute come asole features
+					// asole che in relatï¿½ lo sono all'interno di una certa tolleranza. La condizione
+					// commentata invece ï¿½ piï¿½ permissiva ma la contropartita ï¿½ che vengono riconosciute 
 					// come asole delle geometrie che non lo sono affatto:
 					// ESEMPIO file GOCCIA.MOD.
 					// NEL CASO IN FUTURO QUALCUNO SI LAMENTASSE DEL FATTO CHE ALCUNE GEOMETRIE
-					// ASOLANE NON VENGONO RICONOSCIUTE ALLORA SI DOVRÁ PENSARE AD UNA CONDIZIONE
-					// DI RICONOSCIMENTO PIÚ SOFISTICATA
+					// ASOLANE NON VENGONO RICONOSCIUTE ALLORA SI DOVRï¿½ PENSARE AD UNA CONDIZIONE
+					// DI RICONOSCIMENTO PIï¿½ SOFISTICATA
 					// 
 					// Se l'arco ha un angolo di 180 gradi puo` far parte di un'asola o una semiasola,
 					// altrimenti se ha un angolo di 90 gradi puo` far parte di una demiasola
